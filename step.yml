@@ -8,14 +8,14 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Firebase dSYM Upload
+  Firebase dSYM Upload Fabric
 summary: |
   This step uploads the dsym for your iOS project to Firebase
 description: |
   This step uploads the dsym for your iOS project to Firebase
-website: https://github.com/andrewmarmion/bitrise-step-firebase-dsym-upload
-source_code_url: https://github.com/andrewmarmion/bitrise-step-firebase-dsym-upload
-support_url: https://github.com/andrewmarmion/bitrise-step-firebase-dsym-upload/issues
+website: https://github.com/lucaskuzma/bitrise-step-firebase-dsym-upload
+source_code_url: https://github.com/lucaskuzma/bitrise-step-firebase-dsym-upload
+support_url: https://github.com/lucaskuzma/bitrise-step-firebase-dsym-upload
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -65,13 +65,13 @@ inputs:
         This is the location of where Fabric is stored.
       is_expand: true
       is_required: true
-  - fdu_google_services_location: 
+  - fdu_fabric_api_key: 
     opts:
-      title: "Location of your GoogleService-Info.plist"
+      title: "Fabric API Key"
       description: | 
-        The location is usually in the form ./YOUR-APP-NAME/GoogleService-Info.plist
+        The key from Fabric
       summary: 
-        This is the location of your GoogleService-Info.plist
+        Older apps need this shit
       is_expand: true
       is_required: true
   - fdu_dsym_location: "$BITRISE_DSYM_PATH"
