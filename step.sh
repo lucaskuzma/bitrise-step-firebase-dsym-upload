@@ -5,8 +5,8 @@ if [ ! -e "$fdu_fabric_location" ]; then
   exit 1
 fi
 
-if [ ! -e "$fdu_google_services_location" ]; then
-  echo "Please provide the location of your GoogleService-Info.plist"
+if [ ! -e "$fdu_fabric_api_key" ]; then
+  echo "Please provide your Fabric API key"
   exit 1
 fi
 
@@ -15,4 +15,4 @@ if [ ! -e "$fdu_dsym_location" ]; then
   exit 1
 fi
 
-"$fdu_fabric_location" -gsp "$fdu_google_services_location" -p ios "$fdu_dsym_location"
+"$fdu_fabric_location" -a "$fdu_fabric_api_key" -p ios "$fdu_dsym_location"
