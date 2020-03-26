@@ -65,7 +65,7 @@ inputs:
         This is the location of where Fabric is stored.
       is_expand: true
       is_required: true
-  - fdu_fabric_api_key: 
+  - fdu_fabric_api_key: "$fabric_api_key"
     opts:
       title: "Fabric API Key"
       description: | 
